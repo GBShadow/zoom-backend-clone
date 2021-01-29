@@ -57,7 +57,7 @@ class View {
   }
 
   toggleRecordingButtonColor(isActive = true) {
-    this.recorderBtn.style.color = this.recordingEnabled ? 'red' : 'white'
+    this.recorderBtn.style.color = isActive ? 'red' : 'white'
   }
 
   onRecordClick(command) {
@@ -71,6 +71,6 @@ class View {
   }
 
   configureRecordButton(command) {
-    this.recorderBtn.addEventListener('click', this.onRecordClick(recorderBtn))
+    this.recorderBtn.addEventListener('click', this.onRecordClick(command))
   }
 }
